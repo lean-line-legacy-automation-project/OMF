@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Diseño final — Lean Line Legacy Automation</title>
+<meta name="description" content="Diseño final del sistema: balance de potencia, control, seguridad, componentes y software.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+<a class="brand" href="index.html">Lean Line Legacy Automation</a>
+<nav aria-label="Principal">
+<a href="index.html">Inicio</a>
+<a href="proyecto.html">El proyecto</a>
+<a href="presentacion-1.html">Presentación 1</a>
+<a href="presentacion-2.html">Presentación 2</a>
+<a href="diseno.html" aria-current="page">Diseño final</a>
+<a href="equipo.html">Equipo</a>
+</nav></div></div>
+<header class="hero"><div class="wrap">
+<div class="eyebrow">Diseño final</div>
+<h1>Diseño final</h1>
+<p class="sub">Cómo funciona el sistema por dentro y qué falta para cerrarlo.</p>
+</div></header>
+<main>
+
+<section>
+<div class="section-title">Visión general</div>
+<p class="lead">El sistema es una celda automatizada que reemplaza las estaciones manuales críticas de la línea. Combina mecánica (diseñada en SolidWorks), un panel eléctrico con PLC y HMI, y un circuito de seguridad de doble canal.</p>
+<div class="note ok"><p><strong>Estado:</strong> esta sección se completa a medida que se cierran los diagramas de AutoCAD Electrical, el presupuesto de servicios de ingeniería y la lista de materiales (BOM). Lo que aparece abajo es lo ya confirmado.</p></div>
+</section>
+
+<section id="potencia">
+<div class="section-title">Potencia: un hallazgo de ingeniería</div>
+<p>Los circuitos DC trabajan a 24 VDC. El sistema tiene dos motores stepper y la lista de cargas es esta: PLC con HMI y Ethernet, módulos de I/O, paro de emergencia con cortina de luz, y los dos steppers.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Concepto</th><th>Potencia</th><th>Corriente</th></tr></thead>
+<tbody>
+<tr><td>Carga nominal total</td><td class="num">230.4 W</td><td class="num">9.60 A</td></tr>
+<tr><td>Con factor de carga continua NEC / NFPA 79 (×1.25)</td><td class="num">288.0 W</td><td class="num">12.0 A</td></tr>
+<tr><td>Fuente especificada: Omron S8VK-G24024</td><td class="num">240 W</td><td class="num">10 A</td></tr>
+</tbody></table></div>
+<div class="note"><p><strong>Conclusión:</strong> la fuente cubre la carga nominal (9.60 A de 10 A) pero queda corta bajo el criterio de carga continua (12.0 A contra 10 A). La recomendación del grupo es <strong>subir a una fuente de 12–15 A</strong> en la próxima revisión.</p>
+<p>Detectar y corregir esto antes de construir es parte normal de un diseño responsable, por eso se muestra tal cual.</p></div>
+</section>
+
+<section>
+<div class="section-title">Control</div>
+<p>El PLC CompactLogix 1769-L18ERM recibe las señales de los sensores y de proceso, ejecuta la lógica y activa los actuadores y los steppers. Se comunica por Ethernet con la HMI, desde donde el operador ve el estado del sistema y lo controla.</p>
+<figure><img src="img/plc-panel.jpg" alt="Panel eléctrico con el PLC CompactLogix instalado" loading="lazy"><figcaption>El PLC CompactLogix en el panel eléctrico.</figcaption></figure>
+</section>
+
+<section>
+<div class="section-title">Seguridad</div>
+<p>El circuito de seguridad tiene dos canales independientes: el paro de emergencia y la cortina de luz entran a un relé de seguridad de doble canal. Si las dos señales no coinciden, el relé fuerza un paro seguro en vez de permitir una falla silenciosa de un solo punto.</p>
+<ul class="plain">
+  <li>Paro de emergencia (E-Stop).</li>
+  <li>Cortina de luz Keyence GL-VM15FP, 15 ejes, ø14 mm, para proteger los dedos.</li>
+  <li>Relé de seguridad Guardmaster de doble canal.</li>
+  <li>Desconectador ABB OT40F3 como punto de bloqueo y etiquetado (LOTO).</li>
+  <li>Diseñado alrededor de OSHA 1910.212, OSHA 1910.147 y NFPA 79.</li>
+</ul>
+</section>
+
+<section id="componentes">
+<div class="section-title">Componentes</div>
+<div class="tablewrap"><table>
+<thead><tr><th>Componente</th><th>Modelo y especificación</th></tr></thead>
+<tbody>
+<tr><td>PLC</td><td>Allen-Bradley CompactLogix 1769-L18ERM</td></tr>
+<tr><td>HMI</td><td>AutomationDirect C-more CM5-T10W, 10"</td></tr>
+<tr><td>Fuente de poder</td><td>Omron S8VK-G24024, 24 VDC, 240 W / 10 A (ver <a href="#potencia">Potencia</a>)</td></tr>
+<tr><td>Enclosure</td><td>NEMA 4X, acero inoxidable</td></tr>
+<tr><td>Cortina de luz</td><td>Keyence GL-VM15FP, 15 ejes, ø14 mm</td></tr>
+<tr><td>Relé de seguridad</td><td>Guardmaster de doble canal</td></tr>
+<tr><td>Desconectador</td><td>ABB OT40F3</td></tr>
+<tr><td>Motores</td><td>Dos motores stepper</td></tr>
+</tbody></table></div>
+</section>
+
+<section>
+<div class="section-title">Software utilizado</div>
+<div class="grid2">
+  <div class="card"><h3>SolidWorks</h3><p>Diseño mecánico y modelo 3D de la celda.</p></div>
+  <div class="card"><h3>AutoCAD Electrical</h3><p>Diagramas eléctricos y layout del panel.</p></div>
+  <div class="card"><h3>Studio 5000 Logix Designer</h3><p>Programación de la lógica de control del PLC.</p></div>
+  <div class="card"><h3>C-more</h3><p>Programación de las pantallas de la HMI.</p></div>
+</div>
+<p style="margin-top:12px">También se usó Microsoft Office para la documentación, el seguimiento de materiales y el presupuesto.</p>
+</section>
+
+<section>
+<div class="section-title">Próximos pasos</div>
+<ul class="plain">
+  <li>Subir la fuente de poder a 12–15 A.</li>
+  <li>Cerrar los diagramas de AutoCAD Electrical de potencia y seguridad.</li>
+  <li>Completar la lista de materiales (BOM) y el presupuesto de servicios de ingeniería.</li>
+  <li>Validación, integración final y pruebas de aceptación.</li>
+  <li>Entrenamiento de operadores y mantenimiento, y documentación As-Built.</li>
+</ul>
+</section>
+<div class="nav-between"><a href="presentacion-2.html">&#8592; Presentación 2</a><a href="equipo.html">Equipo &#8594;</a></div>
+</main>
+
+<footer>
+  EE 4002 Capstone Design · Grupo 4 · Polytechnic University of Puerto Rico<br>
+  Fernando Lastra Smith · Miguel A. Arroyo Rodríguez · Owen J. Pagán Rivas
+</footer>
+</body>
+</html>

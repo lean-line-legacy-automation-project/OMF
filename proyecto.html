@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>El proyecto — Lean Line Legacy Automation</title>
+<meta name="description" content="El problema, el producto y el proceso manual que el proyecto Lean Line Legacy Automation busca automatizar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+<a class="brand" href="index.html">Lean Line Legacy Automation</a>
+<nav aria-label="Principal">
+<a href="index.html">Inicio</a>
+<a href="proyecto.html" aria-current="page">El proyecto</a>
+<a href="presentacion-1.html">Presentación 1</a>
+<a href="presentacion-2.html">Presentación 2</a>
+<a href="diseno.html">Diseño final</a>
+<a href="equipo.html">Equipo</a>
+</nav></div></div>
+<header class="hero"><div class="wrap">
+<div class="eyebrow">Significado del proyecto</div>
+<h1>El proyecto</h1>
+<p class="sub">Por qué existe, qué se ensambla y qué cambia al automatizarlo.</p>
+</div></header>
+<main>
+
+<section>
+<div class="section-title">El problema</div>
+<p class="lead">El ensamble actual es manual y depende de tres operadores por línea. Eso trae cuatro dificultades:</p>
+<div class="grid2">
+  <div class="card"><h3>Dependencia de personal</h3><p>La producción depende de tener operadores disponibles en cada turno.</p></div>
+  <div class="card"><h3>Calidad variable</h3><p>El resultado cambia según quién arma la pieza.</p></div>
+  <div class="card"><h3>Riesgo de error humano</h3><p>Los pasos exigen orientación precisa y manejo cuidadoso.</p></div>
+  <div class="card"><h3>Impacto en el paciente</h3><p>Es un componente médico crítico: la precisión afecta directamente la seguridad del paciente.</p></div>
+</div>
+</section>
+
+<section>
+<div class="section-title">El producto</div>
+<p>El stylet es un alambre guía de precisión que se usa al implantar un lead de marcapasos y ayuda a colocarlo con exactitud dentro del corazón. El conjunto lleva tres partes: el <strong>stylet</strong>, el <strong>body knob</strong> (la perilla hexagonal, parte 904117-142) y el <strong>cap</strong>.</p>
+<figure><img src="img/producto-dibujo.png" alt="Dibujo técnico del body y el cap, parte 904117-142" loading="lazy"><figcaption>Plano del body (izquierda y centro) y el cap, parte 904117-142.</figcaption></figure><figure><img src="img/producto-stylet.png" alt="Modelo del stylet con su body amarillo" loading="lazy"><figcaption>El conjunto armado: alambre stylet con el body en el extremo.</figcaption></figure>
+</section>
+
+<section>
+<div class="section-title">El proceso manual actual</div>
+<p>Hoy el ensamble pasa por cuatro pasos, todos hechos a mano por el operador: estampado del stylet, inserción en el body knob, colocación del cap y prensado del cap (press-fit).</p>
+<figure><img src="img/proceso-manual.jpg" alt="Cuatro fotos del proceso manual: estampado, inserción en el body, colocación del cap y prensado" loading="lazy"><figcaption>Los cuatro pasos manuales: estampado, inserción en el body knob, colocación del cap y prensado.</figcaption></figure>
+</section>
+
+<section>
+<div class="section-title">La oportunidad</div>
+<p>Automatizar para reducir la variabilidad, aumentar la consistencia de la producción y mejorar la eficiencia sin perder calidad. La meta es pasar de <strong>3 operadores a 1–2</strong> manteniendo la misma producción, y hacerlo sin sacrificar el cumplimiento regulatorio de un dispositivo médico (FDA 21 CFR 820 e ISO 13485).</p>
+</section>
+
+<section>
+<div class="section-title">Pros y contras</div>
+<div class="grid2">
+  <div class="card">
+    <h3>Lo que ganamos</h3>
+    <ul>
+      <li>Menos operadores por línea (de 3 a 1–2).</li>
+      <li>Proceso más consistente y repetible.</li>
+      <li>Mejor trazabilidad: el PLC y la HMI pueden registrar ciclos, fallas y conteos.</li>
+      <li>Más seguridad para el operador: cortina de luz, paro de emergencia y relé de seguridad de doble canal.</li>
+      <li>Diseño modular que permite ajustes futuros.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Lo que cuesta</h3>
+    <ul>
+      <li>Costo inicial de equipo, panel eléctrico e integración.</li>
+      <li>Mantenimiento nuevo: hace falta personal que sepa de PLC y HMI.</li>
+      <li>Tiempo de validación regulatoria antes de producir.</li>
+      <li>Un hallazgo de ingeniería en la fuente de poder, explicado con detalle en <a href="diseno.html#potencia">Diseño final</a>.</li>
+    </ul>
+  </div>
+</div>
+</section>
+<div class="nav-between"><a href="index.html">&#8592; Inicio</a><a href="presentacion-1.html">Presentación 1 &#8594;</a></div>
+</main>
+
+<footer>
+  EE 4002 Capstone Design · Grupo 4 · Polytechnic University of Puerto Rico<br>
+  Fernando Lastra Smith · Miguel A. Arroyo Rodríguez · Owen J. Pagán Rivas
+</footer>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Presentación 1 — Lean Line Legacy Automation</title>
+<meta name="description" content="Propuesta preliminar del proyecto: problema, diagrama de bloques, objetivos y cronograma.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+<a class="brand" href="index.html">Lean Line Legacy Automation</a>
+<nav aria-label="Principal">
+<a href="index.html">Inicio</a>
+<a href="proyecto.html">El proyecto</a>
+<a href="presentacion-1.html" aria-current="page">Presentación 1</a>
+<a href="presentacion-2.html">Presentación 2</a>
+<a href="diseno.html">Diseño final</a>
+<a href="equipo.html">Equipo</a>
+</nav></div></div>
+<header class="hero"><div class="wrap">
+<div class="eyebrow">Oral Presentation 1 · 16 de abril de 2026</div>
+<h1>Propuesta preliminar</h1>
+<p class="sub">Definimos el problema, el alcance y el plan de trabajo.</p>
+</div></header>
+<main>
+
+<section>
+<div class="section-title">Resumen</div>
+<p class="lead">Propuesta preliminar, presentada el 16 de abril de 2026. Respondió a la pregunta <em>¿qué problema vamos a resolver y cómo planeamos hacerlo?</em></p>
+</section>
+
+<section>
+<div class="section-title">1.1 Definición del problema</div>
+<div class="grid2">
+  <div class="card"><h3>Retos actuales</h3><ul><li>Alta dependencia de mano de obra entre turnos.</li><li>Calidad de producto inconsistente.</li><li>Alto riesgo de error humano.</li></ul></div>
+  <div class="card"><h3>Solución propuesta</h3><ul><li>Diseñar e implementar un sistema de ensamble semiautomatizado.</li><li>Atiende las operaciones manuales de stylets, body knobs y caps.</li><li>Reduce los operadores de 3 a 1–2 con la misma producción.</li></ul></div>
+</div>
+</section>
+
+<section>
+<div class="section-title">1.2 Introducción</div>
+<p>Presenta el producto (el stylet para implantación de leads de marcapasos), el proceso actual (estampado, inserción, colocación del cap y prensado) y la oportunidad de automatizar. Ver <a href="proyecto.html">El proyecto</a> para el detalle.</p>
+</section>
+
+<section>
+<div class="section-title">1.3 Diagrama de bloques</div>
+<p>El sistema se divide en una parte eléctrica (enclosure, PLC y HMI) y una parte mecánica (estaciones de válvulas neumáticas).</p>
+<figure><img src="img/diagrama-bloques.png" alt="Diagrama de bloques del sistema" loading="lazy"><figcaption>Diagrama de bloques: ramas eléctrica y mecánica.</figcaption></figure>
+</section>
+
+<section>
+<div class="section-title">1.4 Arquitectura de interfaces</div>
+<p>Detalla cómo se conectan los subsistemas: fuente de poder, breakers, enclosure, programación de lógica, configuración de I/O, interfaz del operador y control neumático.</p>
+<figure><img src="img/arquitectura-interfaz.png" alt="Diagrama de arquitectura de interfaces del subsistema" loading="lazy"><figcaption>Arquitectura de interfaces del subsistema.</figcaption></figure>
+</section>
+
+<section>
+<div class="section-title">1.5 Aspectos multidisciplinarios</div>
+<div class="grid3">
+  <div class="card"><h3>Ingeniería eléctrica</h3><ul><li>Programación de PLC y configuración de I/O</li><li>Cableado de sensores y acondicionamiento de señal</li><li>Diseño del circuito de seguridad</li><li>Layout del panel de control</li></ul></div>
+  <div class="card"><h3>Ingeniería mecánica</h3><ul><li>Dimensionamiento y selección de cilindros neumáticos</li><li>Diseño de fixtures y herramental</li><li>Análisis de fuerza de press-fit</li></ul></div>
+  <div class="card"><h3>Software</h3><ul><li>SolidWorks</li><li>AutoCAD</li><li>Microsoft Office</li></ul></div>
+</div>
+</section>
+
+<section>
+<div class="section-title">1.6 Objetivos</div>
+<div class="grid2">
+  <div class="card"><h3>Investigación y análisis</h3><ul><li>Analizar los procesos actuales de la línea lean y su factibilidad.</li><li>Reunir datos de eficiencia, rendimiento y calidad.</li><li>Estudiar a fondo el proceso de estampado.</li><li>Recorrer líneas adyacentes para recoger ideas.</li><li>Evaluar componentes para el diseño futuro.</li></ul></div>
+  <div class="card"><h3>Diseño y entregables</h3><ul><li>Definir el alcance del sistema de automatización.</li><li>Determinar qué etapas de producción automatizar.</li><li>Seleccionar componentes dentro del tiempo y presupuesto.</li><li>Simular el diseño para prevenir errores.</li><li>Entregar la presentación final y la documentación As-Built.</li></ul></div>
+</div>
+</section>
+
+<section>
+<div class="section-title">1.7 Procedimiento de implementación</div>
+<ol class="plain" style="margin-left:20px;max-width:68ch">
+  <li>Investigar la operación de los sistemas manuales de ensamble de stylets en la línea de Heraeus Medevio.</li>
+  <li>Buscar información sobre equipos y tecnologías de automatización aplicables al proceso.</li>
+  <li>Estudiar la eficiencia de los componentes de automatización considerados para el diseño.</li>
+</ol>
+</section>
+
+<section>
+<div class="section-title">1.8 Cronograma</div>
+<figure><img src="img/cronograma.png" alt="Cronograma del proyecto en MS Project con porcentaje de avance por tarea" loading="lazy"><figcaption>Cronograma de trabajo (MS Project) con el avance por tarea al momento de la presentación.</figcaption></figure>
+</section>
+<div class="nav-between"><a href="proyecto.html">&#8592; El proyecto</a><a href="presentacion-2.html">Presentación 2 &#8594;</a></div>
+</main>
+
+<footer>
+  EE 4002 Capstone Design · Grupo 4 · Polytechnic University of Puerto Rico<br>
+  Fernando Lastra Smith · Miguel A. Arroyo Rodríguez · Owen J. Pagán Rivas
+</footer>
+</body>
+</html>

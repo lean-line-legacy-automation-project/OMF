@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Presentación 2 — Lean Line Legacy Automation</title>
+<meta name="description" content="Propuesta técnica final: alternativas de diseño, restricciones, componentes y diseño conceptual en SolidWorks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+<a class="brand" href="index.html">Lean Line Legacy Automation</a>
+<nav aria-label="Principal">
+<a href="index.html">Inicio</a>
+<a href="proyecto.html">El proyecto</a>
+<a href="presentacion-1.html">Presentación 1</a>
+<a href="presentacion-2.html" aria-current="page">Presentación 2</a>
+<a href="diseno.html">Diseño final</a>
+<a href="equipo.html">Equipo</a>
+</nav></div></div>
+<header class="hero"><div class="wrap">
+<div class="eyebrow">Oral Presentation 2 · mayo de 2026</div>
+<h1>Propuesta técnica final</h1>
+<p class="sub">Tres alternativas, un diseño elegido y los componentes que lo hacen funcionar.</p>
+</div></header>
+<main>
+
+<section>
+<div class="section-title">Resumen</div>
+<p class="lead">Propuesta técnica final, presentada en mayo de 2026. Pasó del <em>qué</em> al <em>cómo</em>: opciones de diseño, restricciones, componentes y el diseño seleccionado.</p>
+</section>
+
+<section>
+<div class="section-title">2.1 Alternativas de diseño</div>
+<p>Antes de elegir, el grupo planteó tres alternativas.</p>
+<div class="grid3">
+  <div class="card"><h3>Alternativa A</h3><p>Un solo nest con dos bandejas alimentadoras. El operador carga los stylets a mano en cada ciclo.</p></div>
+  <div class="card"><h3>Alternativa B</h3><p>Un gripper toma el stylet y lo lleva al final del recorrido, donde lo suelta en un chute que lo guía por gravedad a un contenedor. Se identificó en la lluvia de ideas pero no se desarrolló más.</p></div>
+  <div class="card"><h3>Alternativa C</h3><p>Una etapa lineal con servo para posicionar al inicio del lote. Cilindros de dos posiciones indexan entre carriles. Cortina de luz de seguridad.</p></div>
+</div>
+<div class="grid2" style="margin-top:16px">
+<figure><img src="img/alt-a-layout.png" alt="Layout del sistema de la alternativa A" loading="lazy"><figcaption>Alternativa A: layout del sistema.</figcaption></figure><figure><img src="img/alt-a-frente.png" alt="Vista frontal de la alternativa A" loading="lazy"><figcaption>Alternativa A: vista frontal.</figcaption></figure><figure><img src="img/alt-b-boceto.jpg" alt="Boceto a mano de la alternativa B" loading="lazy"><figcaption>Alternativa B: boceto a mano.</figcaption></figure><figure><img src="img/alt-c-boceto.jpg" alt="Boceto a mano de la alternativa C" loading="lazy"><figcaption>Alternativa C: boceto a mano.</figcaption></figure>
+</div>
+</section>
+
+<section>
+<div class="section-title">2.2 Restricciones reales</div>
+<div class="grid2">
+  <div class="card"><h3>Diseño</h3><p>Mantener o mejorar la consistencia de la calidad del producto.</p></div>
+  <div class="card"><h3>Social y seguridad</h3><p>Reducir los operadores de 3 a 1–2, con cortina de luz para proteger al operador.</p></div>
+</div>
+</section>
+
+<section>
+<div class="section-title">2.4 Componentes del subsistema</div>
+<div class="grid2">
+  <div class="card"><h3>PLC</h3><p>Allen-Bradley CompactLogix 1769-L18ERM: 16 entradas y 16 salidas digitales a 24 VDC, EtherNet/IP, 2 ejes CIP Motion, 512 KB de memoria.</p></div>
+  <div><figure><img src="img/plc-panel.jpg" alt="Panel eléctrico con el PLC CompactLogix instalado" loading="lazy"><figcaption>El PLC CompactLogix en el panel.</figcaption></figure></div>
+</div>
+<p>El resto de los componentes (HMI, fuente de poder, enclosure, sensores y neumática) se detallan en <a href="diseno.html#componentes">Diseño final</a>.</p>
+</section>
+
+<section>
+<div class="section-title">2.5 Diseño conceptual seleccionado</div>
+<p>El diseño elegido se modeló en 3D en SolidWorks por Miguel A. Arroyo Rodríguez.</p>
+<div class="grid2">
+<figure><img src="img/solidworks-1.png" alt="Modelo 3D del diseño seleccionado, vista 1" loading="lazy"><figcaption>Modelo 3D en SolidWorks, vista 1.</figcaption></figure><figure><img src="img/solidworks-2.png" alt="Modelo 3D del diseño seleccionado, vista 2" loading="lazy"><figcaption>Modelo 3D en SolidWorks, vista 2.</figcaption></figure>
+</div>
+</section>
+<div class="nav-between"><a href="presentacion-1.html">&#8592; Presentación 1</a><a href="diseno.html">Diseño final &#8594;</a></div>
+</main>
+
+<footer>
+  EE 4002 Capstone Design · Grupo 4 · Polytechnic University of Puerto Rico<br>
+  Fernando Lastra Smith · Miguel A. Arroyo Rodríguez · Owen J. Pagán Rivas
+</footer>
+</body>
+</html>
